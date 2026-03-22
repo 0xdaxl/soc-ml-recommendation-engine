@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-03-19T03:42:17.000Z",
+  "rule": {
+    "id": "5763",
+    "description": "SSHD brute force trying to get access to the system",
+    "level": 10,
+    "groups": ["authentication_failures", "sshd", "brute_force"]
+  },
+  "agent": {
+    "id": "003",
+    "name": "healthcare-workstation-03",
+    "ip": "10.10.20.15"
+  },
+  "data": {
+    "srcip": "192.168.1.45",
+    "dstuser": "admin",
+    "failed_attempts": 47,
+    "protocol": "ssh",
+    "port": "22"
+  },
+  "location": "/var/log/auth.log"
+}
