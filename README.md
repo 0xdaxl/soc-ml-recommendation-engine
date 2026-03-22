@@ -1,6 +1,5 @@
 # soc-ml-recommendation-engine
-LLM-powered compliance-aware recommendation engine for healthcare SOC analysts — Wazuh + Gemini + HIPAA/NIST
-SOC ML Recommendation Engine — Healthcare SOC
+
 
 > An LLM-powered compliance-aware recommendation engine for SOC analysts.
 > Analyzes Wazuh SIEM alerts, maps them to HIPAA and NIST frameworks, and generates actionable incident response recommendations in under 10 seconds.
