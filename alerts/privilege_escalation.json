@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-03-19T22:07:55.000Z",
+  "rule": {
+    "id": "5402",
+    "description": "Successful sudo to root executed",
+    "level": 9,
+    "groups": ["authentication_success", "sudo", "privilege_escalation"]
+  },
+  "agent": {
+    "id": "005",
+    "name": "healthcare-linux-workstation",
+    "ip": "10.10.20.51"
+  },
+  "data": {
+    "srcuser": "nurse_account_12",
+    "dstuser": "root",
+    "command": "sudo su -",
+    "tty": "pts/1",
+    "program_name": "sudo",
+    "working_directory": "/home/nurse_account_12"
+  },
+  "location": "/var/log/auth.log"
+}
