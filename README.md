@@ -1,5 +1,4 @@
-# SOC ML Recommendation Engine
-
+# 🛡️ SOC ML Recommendation Engine
 
 > An LLM-powered compliance-aware recommendation engine for SOC analysts.
 > Analyzes Wazuh SIEM alerts, maps them to HIPAA and NIST frameworks, and generates actionable incident response recommendations in under 10 seconds.
@@ -11,7 +10,7 @@
 
 ---
 
-## The problem
+## 🚨 The problem
 
 SOC analysts in healthcare environments receive hundreds of alerts daily. For each alert they must manually determine:
 - What happened and how serious is it?
@@ -23,10 +22,9 @@ This takes 5–15 minutes per alert. Alert fatigue is one of the top challenges 
 
 ---
 
-## The solution
+## ✅ The solution
 
 This engine receives a Wazuh alert JSON, automatically maps it to the relevant HIPAA and NIST compliance rules, and generates a structured recommendation for the analyst — in under 10 seconds.
-
 ```
 Wazuh Alert (JSON)
        +
@@ -41,7 +39,7 @@ SOC Analyst Recommendation
 
 ---
 
-## Sample output
+## 📋 Sample output
 
 **Input — Privilege Escalation alert from Wazuh:**
 ```json
@@ -84,20 +82,20 @@ forensic investigation required.
 
 ---
 
-## Use cases and compliance mapping
+## 🗂️ Use cases and compliance mapping
 
 | Alert Type | HIPAA Rule | NIST Control | Severity |
 |-----------|-----------|--------------|---------|
-| SSH Brute Force | §164.312(d) + §164.308(a)(5)(ii)(C) | AC-7 + IA-5 | HIGH |
-| Malware Detection | §164.308(a)(5)(ii)(B) + §164.308(a)(1)(ii)(A) | SI-3 + IR-4 | CRITICAL |
-| Privilege Escalation | §164.312(a)(1) + §164.308(a)(3) | AC-6 + AC-2 | CRITICAL |
+| 🔐 SSH Brute Force | §164.312(d) + §164.308(a)(5)(ii)(C) | AC-7 + IA-5 | HIGH |
+| 🦠 Malware Detection | §164.308(a)(5)(ii)(B) + §164.308(a)(1)(ii)(A) | SI-3 + IR-4 | CRITICAL |
+| ⬆️ Privilege Escalation | §164.312(a)(1) + §164.308(a)(3) | AC-6 + AC-2 | CRITICAL |
+| 💉 SQL Injection | §164.312(a)(2)(iv) + §164.308(a)(1)(ii)(A) | SI-10 + SA-11 | HIGH |
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 This engine is designed as a **parallel branch** inside an existing n8n SOAR pipeline:
-
 ```
 Wazuh Alert
      ↓
@@ -119,7 +117,7 @@ The automated response runs unchanged. The ML branch adds compliance-aware conte
 
 ---
 
-## Tech stack
+## 🔧 Tech stack
 
 | Component | Tool |
 |-----------|------|
@@ -132,22 +130,17 @@ The automated response runs unchanged. The ML branch adds compliance-aware conte
 
 ---
 
-## Project context
+## 🏥 Project context
 
 Built as the ML feature for a **Healthcare SOC/SOAR university project** implementing a full security operations center for a healthcare organization.
 
-Full infrastructure stack: Wazuh + n8n + TheHive + Cortex + MISP + pfSense + Suricata + Zeek on VMware — 4 network zones (WAN, LAN, DMZ, SOC) .
-This repo contains only the ML recommendation engine component. 
-Built in response to a gap identified in the Wazuh ecosystem — 
-Wazuh GitHub Issue #31600 (August 2025) describes the need for 
-compliance-aware LLM analysis of security alerts. This project 
-is a working PoC demonstrating that approach for healthcare 
-environments, mapping Wazuh alerts to HIPAA and NIST frameworks 
-using Google Gemini.
+Full infrastructure stack: Wazuh + n8n + TheHive + Cortex + MISP + pfSense + Suricata + Zeek on VMware — 4 network zones (WAN, LAN, DMZ, SOC).
+
+This repo contains only the ML recommendation engine component. Built in response to a gap identified in the Wazuh ecosystem — Wazuh GitHub Issue #31600 (August 2025) describes the need for compliance-aware LLM analysis of security alerts. This project is a working PoC demonstrating that approach for healthcare environments, mapping Wazuh alerts to HIPAA and NIST frameworks using Google Gemini.
 
 ---
 
-## Quick start
+## 🚀 Quick start
 
 ### Option 1 — Google Colab (fastest, no setup)
 
@@ -156,8 +149,7 @@ using Google Gemini.
 3. Add your key to Colab Secrets (key icon in sidebar) as `GEMINI_API_KEY`
 4. Run all cells
 
-### Option 2 — Local Python
-
+### Option 2 — Local Python (permanent deployment, no Colab needed)
 ```bash
 git clone https://github.com/0xdaxl/soc-ml-recommendation-engine
 cd soc-ml-recommendation-engine
@@ -177,8 +169,7 @@ python ml_engine.py
 
 ---
 
-## Repository structure
-
+## 📁 Repository structure
 ```
 soc-ml-recommendation-engine/
 ├── README.md                        — This file
@@ -203,7 +194,7 @@ soc-ml-recommendation-engine/
 
 ---
 
-## Security notes
+## 🔒 Security notes
 
 - Never hardcode your API key in code — use environment variables or Colab Secrets
 - The production server (`ml_engine.py`) requires a token header for all requests
@@ -212,6 +203,6 @@ soc-ml-recommendation-engine/
 
 ---
 
-## License
+## 📄 License
 
 MIT — free to use, modify, and distribute with attribution.
