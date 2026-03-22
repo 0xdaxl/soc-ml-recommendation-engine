@@ -136,7 +136,7 @@ The automated response runs unchanged. The ML branch adds compliance-aware conte
 
 Built as the ML feature for a **Healthcare SOC/SOAR university project** implementing a full security operations center for a healthcare organization.
 
-Full infrastructure stack: Wazuh + n8n + TheHive + Cortex + MISP + pfSense + Suricata + Zeek on Vmware — 4 network zones (WAN, LAN, DMZ, SOC), .
+Full infrastructure stack: Wazuh + n8n + TheHive + Cortex + MISP + pfSense + Suricata + Zeek on VMware — 4 network zones (WAN, LAN, DMZ, SOC) .
 This repo contains only the ML recommendation engine component. 
 Built in response to a gap identified in the Wazuh ecosystem — 
 Wazuh GitHub Issue #31600 (August 2025) describes the need for 
