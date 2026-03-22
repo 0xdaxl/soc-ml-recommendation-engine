@@ -12,7 +12,7 @@ from flask import Flask, request, jsonify
 from functools import wraps
 import os
 import json
-import threading
+
 
 # ============================================================
 # CONFIGURATION
