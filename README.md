@@ -138,7 +138,13 @@ Built as the ML feature for a **Healthcare SOC/SOAR university project** impleme
 
 Full infrastructure stack: Wazuh + n8n + TheHive + Cortex + MISP + pfSense + Suricata + Zeek on Proxmox — 4 network zones (WAN, LAN, DMZ, SOC), 7-person team.
 
-This repo contains only the ML recommendation engine component. The engine addresses an open feature request on the official Wazuh GitHub (August 2025) asking for exactly this capability — compliance-aware LLM analysis of security alerts.
+This repo contains only the ML recommendation engine component. 
+Built in response to a gap identified in the Wazuh ecosystem — 
+Wazuh GitHub Issue #31600 (August 2025) describes the need for 
+compliance-aware LLM analysis of security alerts. This project 
+is a working PoC demonstrating that approach for healthcare 
+environments, mapping Wazuh alerts to HIPAA and NIST frameworks 
+using Google Gemini.
 
 ---
 
