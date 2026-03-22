@@ -1,4 +1,4 @@
-# soc-ml-recommendation-engine
+# SOC ML Recommendation Engine
 
 
 > An LLM-powered compliance-aware recommendation engine for SOC analysts.
@@ -154,7 +154,7 @@ This repo contains only the ML recommendation engine component. The engine addre
 ### Option 2 — Local Python
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/soc-ml-recommendation-engine
+git clone https://github.com/0xdaxl/soc-ml-recommendation-engine
 cd soc-ml-recommendation-engine
 pip install -r requirements.txt
 cp .env.example .env
